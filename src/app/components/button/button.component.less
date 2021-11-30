@@ -1,0 +1,151 @@
+
+
+@primary-button: #7b61ff;
+@error: #fd004c;
+@supernova: #fcad28;
+@disable-button-background: #eef2f6;
+@disable-button: rgba(132, 146, 165, 0.5);
+
+:host {
+  display: block;
+}
+
+  .button {
+    display: flex;
+    //justify-content: space-between;
+    width: auto;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 3rem;
+    text-align: center;
+    border: none;
+    border-radius:0.5rem;
+    outline: none;
+    font-family: campton-semi-bold;
+    cursor: pointer;
+    padding: 1rem 2.5rem;
+    background: white;
+    margin:0.5rem;
+  
+    &.primary {
+      background-color: @primary-button;
+      color: white;
+    }
+  
+    &.warning {
+      background-color: @supernova;
+      color: white;
+    }
+  
+    &.error {
+      background-color: @error;
+      color: white;
+    }
+  
+    &.primary:hover,
+    &.primary[hover],
+    &.warning:hover,
+    &.warning[hover],
+    &.error[hover],
+    &.error:hover {
+      box-shadow: -4px 4px 0px @supernova;
+    }
+  
+    &.outline {
+      &-primary {
+        color: @primary-button;
+        background-color: white;
+        border: 2px solid @primary-button;
+      }
+  
+      &-warning {
+        color: @supernova;
+        background-color: white;
+        border: 2px solid @supernova;
+      }
+  
+      &-error {
+        color: @error;
+        background-color: white;
+        border: 2px solid @error;
+      }
+  
+      &-primary:disabled,
+      &-primary[disabled],
+      &-warning:disabled,
+      &-warning[disabled],
+      &-error[disabled],
+      &-error:disabled{
+        border: 2px solid @disable-button!important;
+      }
+  
+      &-primary:hover,
+      &-primary[hover],
+      &-warning:hover,
+      &-warning[hover],
+      &-error[hover],
+      &-error:hover {
+        box-shadow: -4px 4px 0px @supernova;
+      }
+    }
+  
+    &:disabled,
+    &[disabled] {
+      background-color: @disable-button-background;
+      color: @disable-button;
+    }
+  
+    &.link {
+      &-primary {
+        color: @primary-button;
+        background-color: transparent;
+      }
+  
+      &-warning {
+        color: @supernova;
+        background-color: white;
+      }
+  
+      &-error {
+        color: @error;
+        background-color: white;
+      }
+  
+      &-primary:disabled,
+      &-primary[disabled],
+      &-warning:disabled,
+      &-warning[disabled],
+      &-error[disabled],
+      &-error:disabled
+       {
+        opacity: 50%;
+      }
+    }
+  
+    &-icon {
+      background: none;
+      border: none;
+      padding: 0;
+      font-size: 3rem;
+      line-height: 0;
+  
+      &:hover {
+        outline: none;
+      }
+    }
+  }
+
+  .button-full-width{
+    width: 100%;
+  }
+  
+  .icon-left {
+    margin-right: 2rem;
+  }
+  
+  .icon-rigth {
+    margin-left: 2rem;
+  }
+
+
+  

@@ -1,0 +1,20 @@
+<ng-container  class="button-container">
+  <button
+  [type]="type"
+  [disabled]="disabled"
+  (click)="onButtonClick()"
+  [ngClass]="['button new', className]"
+  [class.leftIcon]="leftIcon"
+  [class.rightIcon]="rightIcon"
+  [ngStyle]="styleObject()"
+  >
+  <span class="material-icons icon-left" [hidden]="!leftIcon">
+    {{ leftIcon }}
+  </span>
+  <span>{{ text  | uppercase }}</span>
+  <span class="material-icons icon-rigth" [hidden]="!rightIcon">
+    {{ rightIcon }}
+  </span>
+  </button>
+  
+  </ng-container>
